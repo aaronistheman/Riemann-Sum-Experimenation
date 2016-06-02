@@ -4,6 +4,9 @@
  * func must be a function that takes just one parameter, a number
  */
 function RiemannGenerator(func, numRectangles) {
+  if (!(this instanceof RiemannGenerator)) // if user forgot "new" operator
+    return new RiemannGenerator(func, numRectangles);
+  
   this._func = func;
   this._numRectangles = numRectangles;
 } // RiemannGenerator()

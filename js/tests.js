@@ -1,5 +1,9 @@
 "use strict";
 
+QUnit.module("riemann.js, RiemannGenerator constructor");
+
+
+  
 QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
 
   QUnit.test("test 1: linear function", function(assert) {

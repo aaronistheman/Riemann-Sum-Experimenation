@@ -3,8 +3,8 @@ Todo
 
 -implement the predetermined Riemann sum options
   -unit testing
-    -make "new" mandatory before constructor
     -make a function to not repeat the same test code
+    -perhaps make a function to construct a linear funtion
   -don't graph them, just show the function, the integral
   (range), and the result
   -can switch the version of the Riemann sum used to calculate
