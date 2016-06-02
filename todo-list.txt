@@ -1,13 +1,17 @@
 Todo
 ----
 
--web interface (just HTML for now)
--implement the first, second, and third Riemann sum options
+-web interface
+  -some CSS
+  -have elements to display whatever would be displayed
+-implement the predetermined Riemann sum options
   -think of Riemann sum classes
   -unit testing
   -don't graph them, just show the function, the integral
   (range), and the result
   -can switch the version of the Riemann sum used to calculate
+-implement line graph with user input?
+-CSS; beautiful webpage/site
 
 General Overview/Ideas
 ----------------------

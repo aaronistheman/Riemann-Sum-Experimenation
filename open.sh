@@ -4,4 +4,5 @@
 
 start Notepad++ \
 index.html \
+css/index.css \
 todo-list.txt \
