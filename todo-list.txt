@@ -3,7 +3,6 @@ Todo
 
 -implement the predetermined Riemann sum options
   -unit testing
-    -can't separate tests because QUnit doesn't like it
     -make a function to not repeat the same test code?
     -perhaps make a function to construct a linear funtion?
   -don't graph them, just show the function, the integral
