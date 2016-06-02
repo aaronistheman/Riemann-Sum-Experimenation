@@ -1,0 +1,22 @@
+Todo
+----
+
+-web interface (just HTML for now)
+-implement the first, second, and third Riemann sum options
+  -think of Riemann sum classes
+  -unit testing
+  -don't graph them, just show the function, the integral
+  (range), and the result
+  -can switch the version of the Riemann sum used to calculate
+
+General Overview/Ideas
+----------------------
+
+-test each result with unit test
+-main menu has options:
+  -Riemann sum for predetermined, typical function
+  -Riemann sum for parametric function (vector field)
+  -Riemann sum between two functions
+  -Riemann sum for line graph whose points are somehow received from the user
+  (e.g. read from a text file somehow)
+-within each sum, option to switch the version of the Riemann sum used
