@@ -1,15 +1,14 @@
 Todo
 ----
 
--implement the predetermined Riemann sum options
+-linear function
   -unit testing
-    -can't separate tests because QUnit doesn't like it
     -make a function to not repeat the same test code?
     -perhaps make a function to construct a linear funtion?
-  -don't graph them, just show the function, the integral
-  (range), and the result
-  -can switch the version of the Riemann sum used to calculate
+  -implement both left and right
+  -can switch version of the Riemann sum used (left or right)
 -catch up readme
+-other Riemann sum options
 -implement line graph with user input?
 -CSS; beautiful webpage/site
 
@@ -33,3 +32,6 @@ General Overview/Ideas
   -Riemann sum for line graph whose points are somehow received from the user
   (e.g. read from a text file somehow)
 -within each sum, option to switch the version of the Riemann sum used
+-don't graph them, just show the function, the integral
+  (range), and the result
+  -can switch the version of the Riemann sum used to calculate
