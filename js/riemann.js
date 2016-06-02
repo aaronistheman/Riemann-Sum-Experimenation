@@ -13,7 +13,7 @@ RiemannGenerator.prototype = {
   
   setFunc : function(func) {
     this._func = func;
-  }
+  },
   
   setNumRectangles : function(numRectangles) {
     if (numRectangles > 0)

@@ -8,3 +8,4 @@ css/index.css \
 todo-list.txt \
 js/riemann.js \
 test.html \
+tests.js \
