@@ -2,9 +2,6 @@ Todo
 ----
 
 -linear function
-  -unit testing
-    -make a function to not repeat the same test code?
-    -perhaps make a function to construct a linear funtion?
   -implement both left and right
   -can switch version of the Riemann sum used (left or right)
 -catch up readme
