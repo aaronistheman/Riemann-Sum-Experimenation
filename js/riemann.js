@@ -29,14 +29,12 @@ RiemannGenerator.prototype = {
     var range = upperBound - lowerBound;
     var step = range / this._numRectangles;
     var answer = 0;
-    // for (var x = lowerBound; x < upperBound; x += step)
-    // for (var x = lowerBound; x < upperBound; x += step, console.log("x=" + x))
+    
+    // Execute the summation
     for (var x = lowerBound, i = 0; i < this._numRectangles;
       x += step, ++i)
-    {
       answer += this._func(x) * step;
       
-    }
     return answer;
   },
   
@@ -44,11 +42,12 @@ RiemannGenerator.prototype = {
     var range = upperBound - lowerBound;
     var step = range / this._numRectangles;
     var answer = 0;
-    for (var x = lowerBound + step; x <= upperBound; x += step)
-    {
+    
+    // Execute the summation
+    for (var x = lowerBound + step, i = 0; i < this._numRectangles;
+      x += step, ++i)
       answer += this._func(x) * step;
-      // console.log("x=" + x);
-    }
+      
     return answer;
   },
 };

@@ -2,10 +2,6 @@ Todo
 ----
 
 -linear function
-  -fix left method
-    -ideas:
-      -use the number of rectangles to stop the for loop
-      -use rounding
   -fix right method's test to match left one, and fix right one, too
   (create a different test to expose the issue)
   -change test code to not use jQuery CDN; just have the minified version
