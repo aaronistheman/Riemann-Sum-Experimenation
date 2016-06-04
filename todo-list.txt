@@ -2,7 +2,6 @@ Todo
 ----
 
 -linear function
-  -change test code to not use jQuery CDN; just have the minified version
   -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
 -other Riemann sum options
