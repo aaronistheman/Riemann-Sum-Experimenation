@@ -2,8 +2,6 @@ Todo
 ----
 
 -linear function
-  -fix right method's test to match left one, and fix right one, too
-  (create a different test to expose the issue)
   -change test code to not use jQuery CDN; just have the minified version
   -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
