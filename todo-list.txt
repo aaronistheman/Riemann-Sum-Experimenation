@@ -3,7 +3,8 @@ Todo
 
 -linear function
   -implement both left and right
-  -can switch version of the Riemann sum used (left or right)
+  -change test code to not use jQuery CDN; just have the minified version
+  -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
 -other Riemann sum options
 -implement line graph with user input?

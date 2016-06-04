@@ -26,10 +26,26 @@ RiemannGenerator.prototype = {
   },
   
   getLeftRiemannSum : function(lowerBound, upperBound) {
-    
+    var range = upperBound - lowerBound;
+    var step = range / this._numRectangles;
+    var answer = 0;
+    for (var x = lowerBound; x < upperBound; x += step)
+    {
+      answer += this._func(x) * step;
+      // console.log("x=" + x);
+    }
+    return answer;
   },
   
   getRightRiemannSum : function(lowerBound, upperBound) {
-    
+    var range = upperBound - lowerBound;
+    var step = range / this._numRectangles;
+    var answer = 0;
+    for (var x = lowerBound + step; x <= upperBound; x += step)
+    {
+      answer += this._func(x) * step;
+      // console.log("x=" + x);
+    }
+    return answer;
   },
 };
