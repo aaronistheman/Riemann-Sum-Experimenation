@@ -1,17 +1,14 @@
 Todo
 ----
 
--linear function (use 500000 rectangles)
-  -figure out how to display on webpage (probably say both left and
-  right); JavaScript buttons
-    -default: linear function; display its data
-    -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
 -quadratic function
+  -unit tests
   -change field values based on changed menu option
 -parametric function
 -between two functions
 -other Riemann sum options
+-change sum precision, or have option to change it
 -implement line graph with user input?
 -CSS; beautiful webpage/site
 
