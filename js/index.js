@@ -16,13 +16,13 @@ function OptionData(displayHeader, func, rangeLow, rangeHigh)
 // "Static" OptionData variables
 OptionData.NUM_RECTANGLES = 500000;
 
-function setUpOptionEventHandlers()
+function setUpOptionEventHandlers(menuOptionDataArray)
 {
   $("#lin-button").click(function() {
-    alert($(this).html());
+    display(menuOptionDataArray.linFunc);
   });
   $("#quad-button").click(function() {
-    alert($(this).html());
+    display(menuOptionDataArray.quadFunc);
   });
   $("#para-button").click(function() {
     alert($(this).html());
@@ -44,14 +44,14 @@ function display(optionData)
 
 $(document).ready(function()
 {
-  // Menu option data instances
-  var linFuncOption = new OptionData("Linear Function", function(x)
+  var menuOptionData = {};
+  menuOptionData.linFunc = new OptionData("Linear Function", function(x)
     { return 2 * x + 3; }, -5, 5);
-  var quadFuncOption = new OptionData("Quadratic Function", function(x)
+  menuOptionData.quadFunc = new OptionData("Quadratic Function", function(x)
     { return 5 * x * x - 3 * x - 3; }, -8, 11);
   
-  setUpOptionEventHandlers();
+  setUpOptionEventHandlers(menuOptionData);
   
   // By default, display linear function's data
-  display(linFuncOption);
+  display(menuOptionData.linFunc);
 });
