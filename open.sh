@@ -10,3 +10,4 @@ js/riemann.js \
 test.html \
 js/tests.js \
 js/index.js \
+README.md \
