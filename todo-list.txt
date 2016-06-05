@@ -1,14 +1,25 @@
 Todo
 ----
 
--implement the predetermined Riemann sum options
-  -think of Riemann sum classes
-  -unit testing
-  -don't graph them, just show the function, the integral
-  (range), and the result
-  -can switch the version of the Riemann sum used to calculate
+-catch up readme
+-quadratic function
+  -unit tests
+  -change field values based on changed menu option
+-parametric function
+-between two functions
+-other Riemann sum options
+-change sum precision, or have option to change it
 -implement line graph with user input?
 -CSS; beautiful webpage/site
+
+Considerable
+------------
+
+-graph the functions, or at least the non-parametric ones
+-multiple functions within each option (e.g. multiple linear functions)
+-double and/or triple integrals
+-option to change number of rectangles used
+  -perhaps have a maximum
 
 General Overview/Ideas
 ----------------------
@@ -16,8 +27,12 @@ General Overview/Ideas
 -test each result with unit test
 -main menu has options:
   -Riemann sum for predetermined, typical function
+    -y = mx + b: y = 2x + 3 on range [-5, 5]
   -Riemann sum for parametric function (vector field)
   -Riemann sum between two functions
   -Riemann sum for line graph whose points are somehow received from the user
   (e.g. read from a text file somehow)
 -within each sum, option to switch the version of the Riemann sum used
+-don't graph them, just show the function, the integral
+  (range), and the result
+  -can switch the version of the Riemann sum used to calculate

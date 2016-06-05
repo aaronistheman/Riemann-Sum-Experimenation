@@ -6,3 +6,7 @@ start Notepad++ \
 index.html \
 css/index.css \
 todo-list.txt \
+js/riemann.js \
+test.html \
+js/tests.js \
+js/index.js \
