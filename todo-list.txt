@@ -1,7 +1,9 @@
 Todo
 ----
 
--linear function
+-linear function (use 500000 rectangles)
+  -figure out how to display on webpage (probably say both left and
+  right); JavaScript buttons
   -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
 -other Riemann sum options
