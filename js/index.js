@@ -13,20 +13,16 @@ function OptionData(displayHeader, func, rangeLow, rangeHigh)
   this.rightSum = rg.getRightRiemannSum(rangeLow, rangeHigh);
 } // custom type OptionData
 
+// "Static" OptionData variables
 OptionData.NUM_RECTANGLES = 500000;
 
-$(document).ready(function()
+function setUpOptionEventHandlers(menuOptionDataArray)
 {
-  // Menu option data instances
-  var linFuncOption = new OptionData("Linear Function", function(x)
-    { return 2 * x + 3; }, -5, 5);
-  
-  // Menu option event handlers
   $("#lin-button").click(function() {
-    alert($(this).html());
+    display(menuOptionDataArray.linFunc);
   });
   $("#quad-button").click(function() {
-    alert($(this).html());
+    display(menuOptionDataArray.quadFunc);
   });
   $("#para-button").click(function() {
     alert($(this).html());
@@ -34,12 +30,28 @@ $(document).ready(function()
   $("#btwn-button").click(function() {
     alert($(this).html());
   });
+}
+
+function display(optionData)
+{
+  $("#display-header").html(optionData.displayHeaer);
+  $("#function").html(optionData.func.toString());
+  $("#range-lower").html(optionData.rangeLow);
+  $("#range-higher").html(optionData.rangeHigh);
+  $("#left-sum").html(optionData.leftSum);
+  $("#right-sum").html(optionData.rightSum);
+}
+
+$(document).ready(function()
+{
+  var menuOptionData = {};
+  menuOptionData.linFunc = new OptionData("Linear Function", function(x)
+    { return 2 * x + 3; }, -5, 5);
+  menuOptionData.quadFunc = new OptionData("Quadratic Function", function(x)
+    { return 5 * x * x - 3 * x - 3; }, -8, 11);
+  
+  setUpOptionEventHandlers(menuOptionData);
   
   // By default, display linear function's data
-  $("#display-header").html(linFuncOption.displayHeaer);
-  $("#function").html(linFuncOption.func.toString());
-  $("#range-lower").html(linFuncOption.rangeLow);
-  $("#range-higher").html(linFuncOption.rangeHigh);
-  $("#left-sum").html(linFuncOption.leftSum);
-  $("#right-sum").html(linFuncOption.rightSum);
+  display(menuOptionData.linFunc);
 });

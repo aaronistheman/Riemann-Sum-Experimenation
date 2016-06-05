@@ -1,12 +1,13 @@
 Todo
 ----
 
--catch up readme
--quadratic function
-  -unit tests
-  -change field values based on changed menu option
 -parametric function
+  -study what this is; I can't quite remember
+  -unit tests? perhaps further organize the tests
+  -update menu option
 -between two functions
+  -unit tests
+  -update menu option; figure out how to display each function
 -other Riemann sum options
 -change sum precision, or have option to change it
 -implement line graph with user input?
