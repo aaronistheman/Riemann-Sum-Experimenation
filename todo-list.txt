@@ -2,7 +2,6 @@ Todo
 ----
 
 -quadratic function
-  -unit tests
   -change field values based on changed menu option
 -parametric function
 -between two functions
