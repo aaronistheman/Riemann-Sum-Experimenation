@@ -4,7 +4,8 @@ QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
 
   var numRectsArray = [10, 100, 500, 1000, 5000, 10000, 500000, 1000000];
 
-  QUnit.test("left riemann is lower than real integral", function(assert) {
+  QUnit.test("linear: left riemann is lower than real integral",
+    function(assert) {
     var rg = new RiemannGenerator(function(x) {
       return 2 * x + 3;
     }, 3);
@@ -19,7 +20,8 @@ QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
     }
   });
 
-  QUnit.test("left riemann is higher than real integral", function(assert) {
+  QUnit.test("linear: left riemann is higher than real integral",
+    function(assert) {
     var rg = new RiemannGenerator(function(x) {
       return -2 * x + 3;
     }, 3);
@@ -36,7 +38,8 @@ QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
 
 QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
 
-  QUnit.test("right riemann is higher than real integral", function(assert) {
+  QUnit.test("linear: right riemann is higher than real integral",
+    function(assert) {
     var rg = new RiemannGenerator(function(x) {
       return 2 * x + 3;
     }, 3);
@@ -51,7 +54,8 @@ QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
     }
   });
 
-  QUnit.test("right riemann is lower than real integral", function(assert) {
+  QUnit.test("linear: right riemann is lower than real integral",
+    function(assert) {
     var rg = new RiemannGenerator(function(x) {
       return -2 * x + 3;
     }, 3);
