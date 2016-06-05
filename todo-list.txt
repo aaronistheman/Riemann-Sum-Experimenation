@@ -4,7 +4,10 @@ Todo
 -linear function (use 500000 rectangles)
   -figure out how to display on webpage (probably say both left and
   right); JavaScript buttons
-    -show the function, the integral range, and the Riemann sums
+    -do the calculations and determination of field values at the beginning;
+    have a JS object (and a custom type) for each menu option
+    -default: linear function
+    -change field values
   -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
 -other Riemann sum options
