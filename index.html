@@ -13,12 +13,18 @@
 <body>
 
 <div id="buttons"><b>Options</b><br /><br />
-  <span class="button">Linear Function</span>
-  <span class="button">Quadratic Function</span>
-  <span class="button">Parametric Function (Vector Field)</span>
-  <span class="button">Between Two Linear Functions</span>
+  <span id="lin-button" class="button">Linear Function</span>
+  <span id="quad-button" class="button">Quadratic Function</span>
+  <span id="para-button" class="button">Parametric Function (Vector Field)
+    </span>
+  <span id="btwn-button" class="button">Between Two Linear Functions</span>
   <!-- <span class="button">Line Graph from User Input</span> -->
 </div> <!-- div#buttons -->
+
+<!-- The order of these script tags matters, because a script
+may depend upon the contents of another one -->
+<script src="js/riemann.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 </html>
