@@ -4,12 +4,13 @@ Todo
 -linear function (use 500000 rectangles)
   -figure out how to display on webpage (probably say both left and
   right); JavaScript buttons
-    -do the calculations and determination of field values at the beginning;
-    have a JS object (and a custom type) for each menu option
-    -default: linear function
-    -change field values
-  -can switch version of the Riemann sum used (left or right) (in the HTML)
+    -default: linear function; display its data
+    -can switch version of the Riemann sum used (left or right) (in the HTML)
 -catch up readme
+-quadratic function
+  -change field values based on changed menu option
+-parametric function
+-between two functions
 -other Riemann sum options
 -implement line graph with user input?
 -CSS; beautiful webpage/site
@@ -21,6 +22,7 @@ Considerable
 -multiple functions within each option (e.g. multiple linear functions)
 -double and/or triple integrals
 -option to change number of rectangles used
+  -perhaps have a maximum
 
 General Overview/Ideas
 ----------------------
