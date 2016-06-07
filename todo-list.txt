@@ -2,6 +2,11 @@ Todo
 ----
 
 -between two functions
+  -figure out how to do this; ideas:
+    -adjust RiemannGenerator to allow two functions
+    -THIS: create another RiemannGenerator class, perhaps one that overloads
+    -AND THIS: somehow have a second constructor that just fuses the two
+    given functions into one
   -unit tests
   -update menu option; figure out how to display each function
 -handle the case of lowerSum > upperSum
@@ -10,7 +15,6 @@ Todo
   perhaps replace "that" with what "that" is
   -change sum precision, or have option to change it
   -CSS; beautiful webpage/site
--implement line graph with user input?
 
 Considerable
 ------------
@@ -20,6 +24,8 @@ Considerable
 -double and/or triple integrals
 -option to change number of rectangles used
   -perhaps have a maximum
+-Riemann sum for line graph with user input (or even between two
+line grahps)
 
 General Overview/Ideas
 ----------------------
