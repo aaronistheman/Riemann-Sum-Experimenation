@@ -1,8 +1,7 @@
 Todo
 ----
 
--parametric function
-  -study what this is; I can't quite remember
+-arc length integral
   -unit tests? perhaps further organize the tests
   -update menu option
 -between two functions

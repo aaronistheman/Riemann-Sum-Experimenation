@@ -24,7 +24,7 @@ function setUpOptionEventHandlers(menuOptionDataArray)
   $("#quad-button").click(function() {
     display(menuOptionDataArray.quadFunc);
   });
-  $("#para-button").click(function() {
+  $("#arc-button").click(function() {
     alert($(this).html());
   });
   $("#btwn-button").click(function() {
