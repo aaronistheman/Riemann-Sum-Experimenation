@@ -1,21 +1,21 @@
 Todo
 ----
 
--arc length integral
-  -update menu option
 -between two functions
   -unit tests
   -update menu option; figure out how to display each function
 -handle the case of lowerSum > upperSum
--other Riemann sum options
--change sum precision, or have option to change it
+-visuals:
+  -remove the "that" word from the arc length integral's output;
+  perhaps replace "that" with what "that" is
+  -change sum precision, or have option to change it
+  -CSS; beautiful webpage/site
 -implement line graph with user input?
--CSS; beautiful webpage/site
 
 Considerable
 ------------
 
--graph the functions, or at least the non-parametric ones
+-graph the functions
 -multiple functions within each option (e.g. multiple linear functions)
 -double and/or triple integrals
 -option to change number of rectangles used
