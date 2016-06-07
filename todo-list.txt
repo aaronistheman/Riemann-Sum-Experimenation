@@ -9,6 +9,7 @@ Todo
 -between two functions
   -unit tests
   -update menu option; figure out how to display each function
+-handle the case of lowerSum > upperSum
 -other Riemann sum options
 -change sum precision, or have option to change it
 -implement line graph with user input?
