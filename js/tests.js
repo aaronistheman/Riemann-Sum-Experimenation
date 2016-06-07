@@ -75,6 +75,7 @@ QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
 
   QUnit.test("arc length: left riemann is lower than real integral",
     function(assert) {
+    // The magnitude function is increasing
     var vf = new VectorFunction(function(t) { return -Math.sin(t); },
       function(t) { return Math.cos(t); },
       function(t) { return Math.sqrt(t); });
@@ -87,33 +88,11 @@ QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
     for (var i = 0; i < numRectsArray.length; ++i)
     {
       rg.setNumRectangles(numRectsArray[i]);
-      console.log(numRectsArray[i] + " " +
-        rg.getLeftRiemannSum(LOWER_BOUND, UPPER_BOUND));
       assert.ok(rg.getLeftRiemannSum(LOWER_BOUND, UPPER_BOUND) <
         CALCULATOR_INTEGRAL_ANSWER,
         "Correct for " + numRectsArray[i] + " rectangles");
     }
   });
-
-  /*
-  QUnit.test("arc length: left riemann is higher than real integral",
-    function(assert) {
-    var rg = new RiemannGenerator(function(x) {
-      return 5 * x * x - 3 * x - 3;
-    }, 3);
-    
-    var LOWER_BOUND = -8;
-    var UPPER_BOUND = 0;
-    var CALCULATOR_INTEGRAL_ANSWER = 925.33333333335;
-    
-    for (var i = 0; i < numRectsArray.length; ++i)
-    {
-      assert.ok(rg.getLeftRiemannSum(LOWER_BOUND, UPPER_BOUND) >
-        CALCULATOR_INTEGRAL_ANSWER,
-        "Correct for " + numRectsArray[i] + " rectangles");
-    }
-  });
-  */
 
 QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
 
@@ -181,6 +160,27 @@ QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
     for (var i = 0; i < numRectsArray.length; ++i)
     {
       assert.ok(rg.getRightRiemannSum(LOWER_BOUND, UPPER_BOUND) <
+        CALCULATOR_INTEGRAL_ANSWER,
+        "Correct for " + numRectsArray[i] + " rectangles");
+    }
+  });
+
+  QUnit.test("arc length: right riemann is lower than real integral",
+    function(assert) {
+    // The magnitude function is increasing
+    var vf = new VectorFunction(function(t) { return -Math.sin(t); },
+      function(t) { return Math.cos(t); },
+      function(t) { return Math.sqrt(t); });
+    var rg = new RiemannGenerator(vf.getMagnitudeFunction(), 3);
+    
+    var LOWER_BOUND = 0;
+    var UPPER_BOUND = 2 * Math.PI;
+    var CALCULATOR_INTEGRAL_ANSWER = 12.436937963392;
+    
+    for (var i = 0; i < numRectsArray.length; ++i)
+    {
+      rg.setNumRectangles(numRectsArray[i]);
+      assert.ok(rg.getRightRiemannSum(LOWER_BOUND, UPPER_BOUND) >
         CALCULATOR_INTEGRAL_ANSWER,
         "Correct for " + numRectsArray[i] + " rectangles");
     }

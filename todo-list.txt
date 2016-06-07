@@ -2,9 +2,6 @@ Todo
 ----
 
 -arc length integral
-  -create vector function class that can return magnitude function;
-  just pass this into RiemannGenerator; no other changes needed
-  -unit tests? perhaps further organize the tests
   -update menu option
 -between two functions
   -unit tests
