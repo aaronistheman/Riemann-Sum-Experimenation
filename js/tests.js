@@ -143,3 +143,17 @@ QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
         "Correct for " + numRectsArray[i] + " rectangles");
     }
   });
+
+QUnit.module("vector-function.js, VectorFunction.getMagnitudeFunction()");
+
+  QUnit.test("check returned function", function(assert)
+  {
+    var vf = VectorFunction(function(t) { return t; },
+      function(t) { return Math.pow(t, 2); },
+      function(t) { return Math.pow(t, 2); });
+      
+    var input = 2;
+    var answer = Math.sqrt(Math.pow(input, 2) + Math.pow(input, 4) +
+      Math.pow(input, 4));
+    assert.deepEqual(vf.getMagnitudeFunction()(input), answer);
+  });
