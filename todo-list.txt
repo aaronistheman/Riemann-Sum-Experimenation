@@ -1,8 +1,6 @@
 Todo
 ----
 
--between two functions
-  -update menu option; figure out how to display each function
 -handle the case of lowerSum > upperSum
 -visuals:
   -remove the "that" word from the arc length integral's output;

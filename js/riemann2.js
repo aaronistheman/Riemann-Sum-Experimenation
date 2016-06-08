@@ -16,6 +16,9 @@ function TwoFuncRG(func1, func2, numRectangles)
   
   this.rg = new RiemannGenerator(function(x) {
     return func1(x) - func2(x); }, numRectangles);
+  
+  // this.func1 = func1;
+  // this.func2 = func2;
 }
 
 // Make TwoFuncRG inherit from RiemannGenerator
