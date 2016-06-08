@@ -1,16 +1,38 @@
 "use strict";
 
-// I treat OptionData like a C++ struct
-function OptionData(displayHeader, func, rangeLow, rangeHigh)
+/**
+ * I treat OptionData like a C++ struct
+ *
+ * This is an "overloaded" constructor with two signatures:
+ * 1) function OptionData(displayHeader, func, rangeLow, rangeHigh)
+ * 2) function OptionData(displayHeader, func1, func2, rangeLow, rangeHigh)
+ */
+function OptionData()
 {
-  this.displayHeader = displayHeader;
-  this.func = func;
-  this.rangeLow = rangeLow;
-  this.rangeHigh = rangeHigh;
-  
-  var rg = new RiemannGenerator(func, OptionData.NUM_RECTANGLES);
-  this.leftSum = rg.getLeftRiemannSum(rangeLow, rangeHigh);
-  this.rightSum = rg.getRightRiemannSum(rangeLow, rangeHigh);
+  if (arguments.length == 4) // if signature #1
+  {
+    this.displayHeader = arguments[0];
+    this.func = arguments[1];
+    this.rangeLow = arguments[2];
+    this.rangeHigh = arguments[3];
+    
+    var rg = new RiemannGenerator(this.func, OptionData.NUM_RECTANGLES);
+    this.leftSum = rg.getLeftRiemannSum(this.rangeLow, this.rangeHigh);
+    this.rightSum = rg.getRightRiemannSum(this.rangeLow, this.rangeHigh);
+  }
+  else // if signature #2
+  {
+    alert("HI!");
+    this.displayHeader = arguments[0];
+    this.func = function(x) { return arguments[1](x) - arguments[2](x); };
+    this.rangeLow = arguments[3];
+    this.rangeHigh = arguments[4];
+    
+    var rg = (new TwoFuncRG(arguments[1], arguments[2],
+      OptionData.NUM_RECTANGLES)).rg;
+    this.leftSum = rg.getLeftRiemannSum(this.rangeLow, this.rangeHigh);
+    this.rightSum = rg.getRightRiemannSum(this.rangeLow, this.rangeHigh);
+  }
 } // custom type OptionData
 
 // "Static" OptionData variables
@@ -28,7 +50,7 @@ function setUpOptionEventHandlers(menuOptionDataArray)
     display(menuOptionDataArray.vecFunc);
   });
   $("#btwn-button").click(function() {
-    alert($(this).html());
+    display(menuOptionDataArray.twoFunc);
   });
 }
 
@@ -58,6 +80,10 @@ function getMenuOptionData()
   menuOptionData.vecFunc = new OptionData(
     "Magnitude of Vector Function (i.e. Arc Length)",
     vf.getMagnitudeFunction(), 0, 2 * Math.PI);
+    
+  menuOptionData.twoFunc = new OptionData("Between Two Functions",
+    function(x) { return x; }, function(x) { return Math.pow(x, 2); },
+    0, 0.5);
   
   return menuOptionData;
 }
