@@ -93,6 +93,25 @@ QUnit.module("riemann.js, RiemannGenerator.getLeftRiemannSum()");
         "Correct for " + numRectsArray[i] + " rectangles");
     }
   });
+  
+  QUnit.test("between two functions: left riemann is lower than answer",
+    function(assert)
+  {
+    var rg = (new TwoFuncRG(function(x) { return x; },
+      function(x) { return Math.pow(x, 2); }, 3)).rg;
+      
+    var LOWER_BOUND = 0;
+    var UPPER_BOUND = 0.5;
+    var CALCULATOR_INTEGRAL_ANSWER = 0.08333333333;
+    
+    for (var i = 0; i < numRectsArray.length; ++i)
+    {
+      rg.setNumRectangles(numRectsArray[i]);
+      assert.ok(rg.getLeftRiemannSum(LOWER_BOUND, UPPER_BOUND) <
+        CALCULATOR_INTEGRAL_ANSWER,
+        "Correct for " + numRectsArray[i] + " rectangles");
+    }
+  });
 
 QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
 
@@ -176,6 +195,25 @@ QUnit.module("riemann.js, RiemannGenerator.getRightRiemannSum()");
     var LOWER_BOUND = 0;
     var UPPER_BOUND = 2 * Math.PI;
     var CALCULATOR_INTEGRAL_ANSWER = 12.436937963392;
+    
+    for (var i = 0; i < numRectsArray.length; ++i)
+    {
+      rg.setNumRectangles(numRectsArray[i]);
+      assert.ok(rg.getRightRiemannSum(LOWER_BOUND, UPPER_BOUND) >
+        CALCULATOR_INTEGRAL_ANSWER,
+        "Correct for " + numRectsArray[i] + " rectangles");
+    }
+  });
+  
+  QUnit.test("between two functions: right riemann is higher than answer",
+    function(assert)
+  {
+    var rg = (new TwoFuncRG(function(x) { return x; },
+      function(x) { return Math.pow(x, 2); }, 3)).rg;
+      
+    var LOWER_BOUND = 0;
+    var UPPER_BOUND = 0.5;
+    var CALCULATOR_INTEGRAL_ANSWER = 0.08333333333;
     
     for (var i = 0; i < numRectsArray.length; ++i)
     {

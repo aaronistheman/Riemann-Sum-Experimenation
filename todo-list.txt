@@ -2,7 +2,6 @@ Todo
 ----
 
 -between two functions
-  -unit tests
   -update menu option; figure out how to display each function
 -handle the case of lowerSum > upperSum
 -visuals:
