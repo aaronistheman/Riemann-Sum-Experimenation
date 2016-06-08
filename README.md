@@ -15,8 +15,8 @@ Features
 
 The user can choose to see the left and right Riemann sums of:
  1) a linear function,
- 2) a quadratic function
- 3) a parametric function (vector field)
+ 2) a quadratic function,
+ 3) a velocity vector function (to obtain arc length),
  4) the difference between two functions
 
 Releases

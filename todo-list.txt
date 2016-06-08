@@ -2,11 +2,6 @@ Todo
 ----
 
 -between two functions
-  -figure out how to do this; ideas:
-    -adjust RiemannGenerator to allow two functions
-    -THIS: create another RiemannGenerator class, perhaps one that overloads
-    -AND THIS: somehow have a second constructor that just fuses the two
-    given functions into one
   -unit tests
   -update menu option; figure out how to display each function
 -handle the case of lowerSum > upperSum
